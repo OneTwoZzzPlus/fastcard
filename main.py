@@ -22,4 +22,4 @@ async def get_nearest_balloons(lat: float = 55.694814, lon: float = 37.524875, c
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host="194.87.111.32", port=8000)
