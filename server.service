@@ -1,0 +1,12 @@
+[Unit]
+Description=HTTP API
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/ivan/fastcard/venv/bin/python /home/ivan/fastcard/main.py
+WorkingDirectory=/home/ivan/fastcard
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
