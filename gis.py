@@ -1,4 +1,5 @@
 from db import balloons, BalloonAns
+from config import API_KEY_2GIS
 import requests
 
 
@@ -12,8 +13,8 @@ def sorted_balloons(lat, lon):
 
 async def route_2gis(lat1, lon1, lat2, lon2):
     print(f'Routing between {lat1}, {lon1} and {lat2}, {lon2}')
-    API_KEY = 'f621ae59-f0ca-45df-87be-075a2a1244a3'
-    url = f'http://routing.api.2gis.com/routing/7.0.0/global?key={API_KEY}'
+
+    url = f'http://routing.api.2gis.com/routing/7.0.0/global?key={API_KEY_2GIS}'
     json = {
         "points": [
             {"type": "stop", "lat": lat1, "lon": lon1},
